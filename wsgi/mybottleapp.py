@@ -1,13 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 from bottle import route, run, template, get, post, request, response, redirect, default_app, static_file, TEMPLATE_PATH, error
-import oauth2 as oauth
-import urlparse 
- 
-consumer_key           = "CONSUMER_KEY"
-consumer_secret        = "CONSUMER_SECRET"
-consumer = oauth.Consumer(consumer_key, consumer_secret)
-client = oauth.Client(consumer)
+
 
 @route('/name/<name>')
 def nameindex(name='Stranger'):
