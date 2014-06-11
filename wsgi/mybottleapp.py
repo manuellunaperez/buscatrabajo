@@ -42,7 +42,7 @@ def busqueda():
 	listarequisitosmin = []
 	listalink = []
 	f = requests.get(url)
-	archivo = json.load(f)
+	archivo = json.loads(f.text)
 	ofertas = archivo["offers"]	
 	for oferta in ofertas:
 		titulo = oferta["title"]
