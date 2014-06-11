@@ -6,6 +6,15 @@ import requests
 import json
 import httplib, base64
 
+
+    
+@get('/')
+def inicio():
+    return template('index.tpl')
+
+
+
+@post('/busqueda')
 client_id = "d02252860f40443b8afb68ad26137f3c"
 client_secret = "FTmld3Q4q167v3e8ZY2yZar/GRl8Jgm1QKi4IS7vNfTQk7E6YP"
 auth = base64.encodestring("%s:%s" % (client_id, client_secret))
@@ -17,14 +26,6 @@ response = conn.getresponse()
 data = response.read()
 conn.close()
 
-    
-@get('/')
-def inicio():
-    return template('index.tpl')
-
-
-
-@post('/busqueda')
 def busqueda():
 	provincia = bottle.request.forms.get("provincia")
 	if len(provincia) > 1:
