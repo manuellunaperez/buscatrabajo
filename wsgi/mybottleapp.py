@@ -5,11 +5,6 @@ import bottle
 import requests
 import json
 
-
-
-auth = base64.encodestring('d02252860f40443b8afb68ad26137f3c:FTmld3Q4q167v3e8ZY2yZar/GRl8Jgm1QKi4IS7vNfTQk7E6YP')
-webservice.putheader("Authorization", "Basic %s" % auth)
-
 import urllib2, base64
 
 request = urllib2.Request("http://api.foursquare.com/v1/user")
