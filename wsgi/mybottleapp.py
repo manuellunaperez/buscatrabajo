@@ -7,12 +7,8 @@ from bottle import route, run, template, get, post, request, response, redirect,
 def nameindex(name='Stranger'):
     return '<strong>Hello, %s!</strong>' % name
    
- @route('/')
+@route('/')
 def index():
-	return 'https://www.infojobs.net/api/oauth/user-authorize/index.xhtml?scope=COMMA_SEPARATED_LIST_OF_SCOPE_NAMES&client_id=d7b9252346754165aac4a7e0eb6e3f15&redirect_uri=YOUR_CALLBACK_URI&response_type=code&state=OPTIONAL_CLIENT_LOCAL_STATE'
- 
-@route('/index')
-def principal():
     return template('index.tpl')
 
 @route('/busqueda')
