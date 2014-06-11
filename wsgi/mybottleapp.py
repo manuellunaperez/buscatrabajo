@@ -58,13 +58,8 @@ def busqueda():
 	conn = httplib.HTTPConnection("api.infojobs.net")
 	conn.request("GET", "/api/1/offer?%s%s%s%s" % (provincia,categoria,contratos,formacion), headers=headers)
 	response = conn.getresponse()
-	archivo = response.read()
+	data = response.read()
 	conn.close()
-
-
-	"""
-	oferta = "https://api.infojobs.net/api/1/offer?"
-	url = "%s%s%s%s%s" % (oferta,provincia,categoria,contratos,formacion)
 	listatitulos = []
 	listaciudad = []
 	listanombreempresa = []
@@ -73,9 +68,7 @@ def busqueda():
 	listaestudios = []
 	listarequisitosmin = []
 	listalink = []
-	f = requests.get(url)
-	archivo = json.loads(f.text)
-	
+	archivo = json.loads(data.text)	
 	ofertas = archivo["offers"]	
 	for oferta in ofertas:
 		titulo = oferta["title"]
@@ -95,9 +88,9 @@ def busqueda():
 		listarequisitosmin.append(requisitosmin)
 		listalink.append(link)
 	
-	"""
 	
-	return template('respuesta2.tpl', {'archivo':archivo})#, {'ofertas':ofertas,'titulo':listatitulos,'ciudad':listaciudad,'nombreempresa':listanombreempresa,'experienciaminima':listaexperiencia,'jornada':listajornada,'estudios':listaestudios,'requisitosmin':listarequisitosmin,'link':listalink})
+	
+	return template('respuesta.tpl', {'ofertas':ofertas,'titulo':listatitulos,'ciudad':listaciudad,'nombreempresa':listanombreempresa,'experienciaminima':listaexperiencia,'jornada':listajornada,'estudios':listaestudios,'requisitosmin':listarequisitosmin,'link':listalink})
 	
 
 # This must be added in order to do correct path lookups for the views
