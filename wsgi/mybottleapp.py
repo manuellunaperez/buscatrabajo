@@ -4,6 +4,13 @@ from bottle import route, run, template, get, post, request, response, redirect,
 import bottle
 import requests
 import json
+
+import base64
+import string
+auth = base64.encodestring('d7b9252346754165aac4a7e0eb6e3f15:/h6n6V0pi6WrmF+yxg/4Gld6O4jW7+9Oldi92KHlJZGJ2Yxngg')
+webservice.putheader("Authorization", "Basic %s" % auth)
+
+
 @get('/')
 def inicio():
     return template('index.tpl')
