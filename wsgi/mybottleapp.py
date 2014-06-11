@@ -67,9 +67,8 @@ def busqueda():
 	listajornada = []
 	listaestudios = []
 	listarequisitosmin = []
-	listalink = []
-	archivo = json.loads(data.text)	
-	ofertas = archivo["offers"]	
+	listalink = []	
+	ofertas = data["offers"]	
 	for oferta in ofertas:
 		titulo = oferta["title"]
 		ciudad = oferta["city"]
