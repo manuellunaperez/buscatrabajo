@@ -3,13 +3,13 @@ import os
 from bottle import route, run, template, get, post, request, response, redirect, default_app, static_file, TEMPLATE_PATH, error
 
 
-@route('/')
+@bottle.get('/')
 def inicio():
     return template('index.tpl')
 
 
 
-@route('/busqueda')
+@bottle.post('/busqueda')
 def busqueda():
 	provincia = bottle.request.forms.get("provincia")
 	if len(provincia) > 1:
