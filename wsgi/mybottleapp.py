@@ -59,6 +59,7 @@ def busqueda():
 	listalink = []
 	f = requests.get(url)
 	archivo = json.loads(f.text)
+	"""
 	ofertas = archivo["offers"]	
 	for oferta in ofertas:
 		titulo = oferta["title"]
@@ -78,7 +79,7 @@ def busqueda():
 		listarequisitosmin.append(requisitosmin)
 		listalink.append(link)
 	
-	
+	"""
 	
 	return template('respuesta2.tpl', {'archivo':archivo})#, {'ofertas':ofertas,'titulo':listatitulos,'ciudad':listaciudad,'nombreempresa':listanombreempresa,'experienciaminima':listaexperiencia,'jornada':listajornada,'estudios':listaestudios,'requisitosmin':listarequisitosmin,'link':listalink})
 
