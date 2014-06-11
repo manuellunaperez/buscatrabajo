@@ -58,7 +58,8 @@ def busqueda():
 	conn = httplib.HTTPConnection("api.infojobs.net")
 	conn.request("GET", "/api/1/offer?%s%s%s%s" % (provincia,categoria,contratos,formacion), headers=headers)
 	response = conn.getresponse()
-	data = response.read()
+	data = json.loads(response.text)
+	#data = response.read()
 	conn.close()
 	listatitulos = []
 	listaciudad = []
@@ -67,7 +68,8 @@ def busqueda():
 	listajornada = []
 	listaestudios = []
 	listarequisitosmin = []
-	listalink = []	
+	listalink = []
+	#archivo = json.loads(data.text)	
 	ofertas = data["offers"]	
 	for oferta in ofertas:
 		titulo = oferta["title"]
