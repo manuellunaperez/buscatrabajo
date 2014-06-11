@@ -4,14 +4,25 @@ from bottle import route, run, template, get, post, request, response, redirect,
 import bottle
 import requests
 import json
-
+"""
 import urllib2, base64
-
 request = urllib2.Request("http://api.infojobs.net")
 base64string = 'ZDAyMjUyODYwZjQwNDQzYjhhZmI2OGFkMjYxMzdmM2M6RlRtbGQzUTRxMTY3djNlOFpZMnlaYXIvR1JsOEpnbTFRS2k0SVM3dk5mVFFrN0U2WVA='
 request.add_header("Authorization", "Basic %s" % base64string)   
 result = urllib2.urlopen(request)
+"""
 
+authString = = 'ZDAyMjUyODYwZjQwNDQzYjhhZmI2OGFkMjYxMzdmM2M6RlRtbGQzUTRxMTY3djNlOFpZMnlaYXIvR1JsOEpnbTFRS2k0SVM3dk5mVFFrN0U2WVA='
+headers = {'Authorization':"Basic %s" % authString}
+myServer = 'http://api.infojobs.net'
+req = urllib2.Request(myServer, None, headers)
+openedUrl = urllib2.urlopen(req)
+if openedUrl:
+  myContent = openedUrl.read()
+  if myContent:
+    print myContent
+    
+    
 @get('/')
 def inicio():
     return template('index.tpl')
