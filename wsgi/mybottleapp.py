@@ -25,7 +25,6 @@ def busqueda():
 	conn.request("GET", "/api/1/offer", headers=headers)
 	response = conn.getresponse()
 	data = response.read()
-	conn.close()
 
 	provincia = bottle.request.forms.get("provincia")
 	if len(provincia) > 1:
