@@ -3,13 +3,10 @@ import os
 from bottle import route, run, template, get, post, request, response, redirect, default_app, static_file, TEMPLATE_PATH, error
 
 
-@route('/name/<name>')
-def nameindex(name='Stranger'):
-    return '<strong>Hello, %s!</strong>' % name
-   
 @route('/')
-def index():
+def inicio():
     return template('index.tpl')
+
 
 @route('/busqueda')
 def busqueda():
@@ -66,7 +63,15 @@ def busqueda():
 	
 		
 	
-	return template('respuesta.tpl', {'ofertas':ofertas,'titulo':listatitulos,'ciudad':listaciudad,'nombreempresa':listanombreempresa,'experienciaminima':listaexperiencia,'jornada':listajornada,'estudios':listaestudios,'requisitosmin':listarequisitosmin,'link':listalink})
+	return template('respuesta.tpl', {'ofertas':ofertas,
+									'titulo':listatitulos,
+									'ciudad':listaciudad,
+									'nombreempresa':listanombreempresa,
+									'experienciaminima':listaexperiencia,
+									'jornada':listajornada,
+									'estudios':listaestudios,
+									'requisitosmin':listarequisitosmin,
+									'link':listalink})
 
 
 # This must be added in order to do correct path lookups for the views

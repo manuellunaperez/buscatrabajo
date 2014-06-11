@@ -2,24 +2,10 @@
 import os
 from bottle import route, run, template, get, post, request, response, redirect, default_app, static_file, TEMPLATE_PATH, error
 
-""""import urllib2, base64
-request = urllib2.Request("api.infojobs.net")
-base64string = base64.encodestring('%s:%s' % ('d7b9252346754165aac4a7e0eb6e3f15', '/h6n6V0pi6WrmF+yxg/4Gld6O4jW7+9Oldi92KHlJZGJ2Yxngg'))
-request.add_header("Authorization", "Basic %s" % base64string)   
-result = urllib2.urlopen(request)
-
-
-@get('/')
-def index():
-	    return template('login.tpl')
-  """ 
-  
-  
 
 @route('/')
 def inicio():
     return template('index.tpl')
-
 
 
 @route('/busqueda')
@@ -55,7 +41,10 @@ def busqueda():
 	listarequisitosmin = []
 	listalink = []
 	f = requests.get(url)
-	archivo = json.load(f)
+	archivo = json.loads(f.text)
+	return template ('respuesta2.tpl',{'archivo':archivo})
+	"""archivo = json.load(f)
+	
 	ofertas = archivo["offers"]	
 	for oferta in ofertas:
 		titulo = oferta["title"]
@@ -77,8 +66,16 @@ def busqueda():
 	
 		
 	
-	return template('respuesta.tpl', {'ofertas':ofertas,'titulo':listatitulos,'ciudad':listaciudad,'nombreempresa':listanombreempresa,'experienciaminima':listaexperiencia,'jornada':listajornada,'estudios':listaestudios,'requisitosmin':listarequisitosmin,'link':listalink})
-
+	return template('respuesta.tpl', {'ofertas':ofertas,
+									'titulo':listatitulos,
+									'ciudad':listaciudad,
+									'nombreempresa':listanombreempresa,
+									'experienciaminima':listaexperiencia,
+									'jornada':listajornada,
+									'estudios':listaestudios,
+									'requisitosmin':listarequisitosmin,
+								'link':listalink})
+"""
 
 # This must be added in order to do correct path lookups for the views
 import os
