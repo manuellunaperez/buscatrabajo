@@ -15,7 +15,7 @@ import urllib2
 import base64
 authString = 'ZDAyMjUyODYwZjQwNDQzYjhhZmI2OGFkMjYxMzdmM2M6RlRtbGQzUTRxMTY3djNlOFpZMnlaYXIvR1JsOEpnbTFRS2k0SVM3dk5mVFFrN0U2WVA='
 headers = {'Authorization':"Basic %s" % authString}
-myServer = 'http://api.infojobs.net'
+myServer = 'http://api.infojobs.net/api/1/offer'
 req = urllib2.Request(myServer, None, headers)
 openedUrl = urllib2.urlopen(req)
 
