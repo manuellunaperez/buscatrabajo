@@ -2,7 +2,7 @@
 import os
 from bottle import route, run, template, get, post, request, response, redirect, default_app, static_file, TEMPLATE_PATH, error
 import bottle
-import requests
+
 
 @get('/')
 def inicio():
