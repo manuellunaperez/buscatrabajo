@@ -21,12 +21,6 @@ conn.close()
     
 @get('/')
 def inicio():
-	import httplib
-	conn = httplib.HTTPConnection("api.infojobs.net")
-	conn.request("GET", "/api/1/offer")
-	response = conn.getresponse()
-	data = response.read()
-	conn.close()
     return template('index.tpl')
 
 
@@ -55,17 +49,6 @@ def busqueda():
 		formacion = ""
 	oferta = "https://api.infojobs.net/api/1/offer?"
 	url = "%s%s%s%s%s" % (oferta,provincia,categoria,contratos,formacion)
-	
-	import httplib, urllib
-	params = {provincia : 1, categoria : 2, contratos : 3 , formacion : 4}
-	params = urllib.urlencode(params)
-	headers = {"Content-type": "application/x-www-form-urlencoded", "Accept": "text/plain"}
-
-	conn = httplib.HTTPConnection("api.infojobs.net")
-	conn.request("POST", "/api/1/offer", params, headers)
-	response = conn.getresponse()
-	data = response.read()
-	conn.close()
 	listatitulos = []
 	listaciudad = []
 	listanombreempresa = []
@@ -76,7 +59,7 @@ def busqueda():
 	listalink = []
 	f = requests.get(url)
 	archivo = json.loads(f.text)
-	"""ofertas = archivo["offers"]	
+	ofertas = archivo["offers"]	
 	for oferta in ofertas:
 		titulo = oferta["title"]
 		ciudad = oferta["city"]
@@ -95,7 +78,7 @@ def busqueda():
 		listarequisitosmin.append(requisitosmin)
 		listalink.append(link)
 	
-	"""	
+	
 	
 	return template('respuesta2.tpl', {'archivo':archivo})#, {'ofertas':ofertas,'titulo':listatitulos,'ciudad':listaciudad,'nombreempresa':listanombreempresa,'experienciaminima':listaexperiencia,'jornada':listajornada,'estudios':listaestudios,'requisitosmin':listarequisitosmin,'link':listalink})
 
