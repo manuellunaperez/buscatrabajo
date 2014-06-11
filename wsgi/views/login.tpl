@@ -7,7 +7,7 @@
   </head>
   <body>
   	<div id="boton" class="centrado"> 
-  		<a href="hola" class="boton colorBoton formaBoton">Iniciar sesión INFOJOBS</a>
+  		<a href="hola" class="boton colorBoton formaBoton">Iniciar sesión</a>
   	</div>
   </body>
 </html>
