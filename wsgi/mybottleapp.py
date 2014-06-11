@@ -5,8 +5,8 @@ from bottle import route, run, template, get, post, request, response, redirect,
   
 @get('/')
 def index():
-	authorize_url = "https://www.infojobs.net/api/oauth/user-authorize/index.xhtml?scope=Proyecto&client_id=d7b9252346754165aac4a7e0eb6e3f15&redirect_uri=buscatrabajo-manuelluna.rhcloud.com/index.tpl&response_type=1"
-    return template('login.tpl', authorize_url=authorize_url)
+	#authorize_url = "https://www.infojobs.net/api/oauth/user-authorize/index.xhtml?scope=Proyecto&client_id=d7b9252346754165aac4a7e0eb6e3f15&redirect_uri=buscatrabajo-manuelluna.rhcloud.com/index.tpl&response_type=1"
+    return template('login.tpl')
    
 
 @route('/index.tpl')
