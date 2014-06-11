@@ -59,6 +59,7 @@ def busqueda():
 	conn.request("GET", "/api/1/offer?%s%s%s%s%s" % (oferta,provincia,categoria,contratos,formacion), headers=headers)
 	response = conn.getresponse()
 	archivo = response.read()
+	conn.close()
 
 
 	"""
@@ -97,7 +98,7 @@ def busqueda():
 	"""
 	
 	return template('respuesta2.tpl', {'archivo':archivo})#, {'ofertas':ofertas,'titulo':listatitulos,'ciudad':listaciudad,'nombreempresa':listanombreempresa,'experienciaminima':listaexperiencia,'jornada':listajornada,'estudios':listaestudios,'requisitosmin':listarequisitosmin,'link':listalink})
-	conn.close()
+	
 
 # This must be added in order to do correct path lookups for the views
 import os
