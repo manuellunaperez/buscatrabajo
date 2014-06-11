@@ -12,7 +12,7 @@ request.add_header("Authorization", "Basic %s" % base64string)
 result = urllib2.urlopen(request)
 """
 
-authString = = 'ZDAyMjUyODYwZjQwNDQzYjhhZmI2OGFkMjYxMzdmM2M6RlRtbGQzUTRxMTY3djNlOFpZMnlaYXIvR1JsOEpnbTFRS2k0SVM3dk5mVFFrN0U2WVA='
+authString = 'ZDAyMjUyODYwZjQwNDQzYjhhZmI2OGFkMjYxMzdmM2M6RlRtbGQzUTRxMTY3djNlOFpZMnlaYXIvR1JsOEpnbTFRS2k0SVM3dk5mVFFrN0U2WVA='
 headers = {'Authorization':"Basic %s" % authString}
 myServer = 'http://api.infojobs.net'
 req = urllib2.Request(myServer, None, headers)
