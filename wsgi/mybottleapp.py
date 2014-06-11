@@ -4,6 +4,7 @@ from bottle import route, run, template, get, post, request, response, redirect,
 import bottle
 import requests
 import json
+
 import httplib, base64
 
 client_id = "d02252860f40443b8afb68ad26137f3c"
@@ -20,13 +21,18 @@ conn.close()
     
 @get('/')
 def inicio():
+	import httplib
+	conn = httplib.HTTPConnection("api.infojobs.net")
+	conn.request("GET", "/api/1/offer")
+	response = conn.getresponse()
+	data = response.read()
+	conn.close()
     return template('index.tpl')
 
 
 
 @post('/busqueda')
 def busqueda():
-
 	provincia = bottle.request.forms.get("provincia")
 	if len(provincia) > 1:
 		provincia = "province=%s" % provincia
@@ -49,6 +55,17 @@ def busqueda():
 		formacion = ""
 	oferta = "https://api.infojobs.net/api/1/offer?"
 	url = "%s%s%s%s%s" % (oferta,provincia,categoria,contratos,formacion)
+	
+	import httplib, urllib
+	params = {provincia : 1, categoria : 2, contratos : 3 , formacion : 4}
+	params = urllib.urlencode(params)
+	headers = {"Content-type": "application/x-www-form-urlencoded", "Accept": "text/plain"}
+
+	conn = httplib.HTTPConnection("api.infojobs.net")
+	conn.request("POST", "/api/1/offer", params, headers)
+	response = conn.getresponse()
+	data = response.read()
+	conn.close()
 	listatitulos = []
 	listaciudad = []
 	listanombreempresa = []
