@@ -2,26 +2,6 @@
 import os
 from bottle import route, run, template, get, post, request, response, redirect, default_app, static_file, TEMPLATE_PATH, error
 
-fclaves = open(os.path.join(os.path.dirname(__file__),'claves.txt'),'r')
-claves = fclaves.readline()
-clave = claves.split(",")
-CONSUMER_KEY = clave[0]
-CONSUMER_SECRET = clave[1]
-TOKENS = {}
-oauth = ''
-
-REQUEST_TOKEN_URL = 'https://www.infojobs.net/api/oauth/user-authorize/index.xhtml'
-AUTHENTICATE_URL = ''
-ACCESS_TOKEN_URL = 'https://www.infojobs.net/oauth/authorize' 
- 
-https://www.infojobs.net/api/oauth/user-authorize/index.xhtml
-	?scope=COMMA_SEPARATED_LIST_OF_SCOPE_NAMES
-	&client_id=YOUR_CLIENT_ID
-	&redirect_uri=YOUR_CALLBACK_URI
-	&response_type=code
-	&state=OPTIONAL_CLIENT_LOCAL_STATE
-
-
   
 @get('/')
 def index():
