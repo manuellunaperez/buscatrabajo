@@ -4,19 +4,24 @@ from bottle import route, run, template, get, post, request, response, redirect,
 import bottle
 import requests
 import json
-
+import httplib, urllib
+"""
 import httplib, base64
+contractType=indefinido&province=madrid&category=informatica-telecomunicaciones 
+params= urllib.urlencode({'province':' madrid' ,'contractType':' indefinido' ,'category':' informatica-telecomunicaciones ' })
 
-client_id = "d02252860f40443b8afb68ad26137f3c"
-client_secret = "FTmld3Q4q167v3e8ZY2yZar/GRl8Jgm1QKi4IS7vNfTQk7E6YP"
-auth = base64.encodestring("%s:%s" % (client_id, client_secret))
-headers = {"Authorization" : "Basic %s" % auth}
+params = urllib.urlencode({'@contractType': 'indefinido', '@province': 'madrid', '@category': 'informatica-telecomunicaciones'})
+#client_id = "d02252860f40443b8afb68ad26137f3c"
+#client_secret = ":FTmld3Q4q167v3e8ZY2yZar/GRl8Jgm1QKi4IS7vNfTQk7E6YP"
+client = "ZDAyMjUyODYwZjQwNDQzYjhhZmI2OGFkMjYxMzdmM2M6RlRtbGQzUTRxMTY3djNlOFpZMnlaYXIvR1JsOEpnbTFRS2k0SVM3dk5mVFFrN0U2WVA="
+#auth = base64.encodestring("%s:%s" % (client_id,client_secret))
+headers = {"Authorization" : "Basic %s" % client}
 conn = httplib.HTTPConnection("api.infojobs.net")
-conn.request("GET", "/api/1/offer", headers=headers)
+conn.request("GET", "/api/1/offer?contractType=indefinido&province=madrid&category=informatica-telecomunicaciones", headers=headers)
 response = conn.getresponse()
 data = response.read()
 conn.close()
-
+"""
 
     
 @get('/')
@@ -47,6 +52,16 @@ def busqueda():
 		formacion = "&study=%s" % formacion
 	else:
 		formacion = ""
+
+	client = "ZDAyMjUyODYwZjQwNDQzYjhhZmI2OGFkMjYxMzdmM2M6RlRtbGQzUTRxMTY3djNlOFpZMnlaYXIvR1JsOEpnbTFRS2k0SVM3dk5mVFFrN0U2WVA="
+	headers = {"Authorization" : "Basic %s" % client}
+	conn = httplib.HTTPConnection("api.infojobs.net")
+	conn.request("GET", "/api/1/offer?%s%s%s%s%s" % (oferta,provincia,categoria,contratos,formacion), headers=headers)
+	response = conn.getresponse()
+	archivo = response.read()
+
+
+	"""
 	oferta = "https://api.infojobs.net/api/1/offer?"
 	url = "%s%s%s%s%s" % (oferta,provincia,categoria,contratos,formacion)
 	listatitulos = []
@@ -59,7 +74,7 @@ def busqueda():
 	listalink = []
 	f = requests.get(url)
 	archivo = json.loads(f.text)
-	"""
+	
 	ofertas = archivo["offers"]	
 	for oferta in ofertas:
 		titulo = oferta["title"]
@@ -82,7 +97,7 @@ def busqueda():
 	"""
 	
 	return template('respuesta2.tpl', {'archivo':archivo})#, {'ofertas':ofertas,'titulo':listatitulos,'ciudad':listaciudad,'nombreempresa':listanombreempresa,'experienciaminima':listaexperiencia,'jornada':listajornada,'estudios':listaestudios,'requisitosmin':listarequisitosmin,'link':listalink})
-
+	conn.close()
 
 # This must be added in order to do correct path lookups for the views
 import os
