@@ -10,7 +10,7 @@ CONSUMER_SECRET = clave[1]
 TOKENS = {}
 oauth = ''
 
-"""REQUEST_TOKEN_URL = 'https://www.infojobs.net/api/oauth/user-authorize/index.xhtml'
+REQUEST_TOKEN_URL = 'https://www.infojobs.net/api/oauth/user-authorize/index.xhtml'
 AUTHENTICATE_URL = ''
 ACCESS_TOKEN_URL = 'https://www.infojobs.net/oauth/authorize' 
  
@@ -22,39 +22,18 @@ https://www.infojobs.net/api/oauth/user-authorize/index.xhtml
 	&state=OPTIONAL_CLIENT_LOCAL_STATE
 
 
- 
-def get_request_token():
-    oauth = OAuth1(CONSUMER_KEY,
-                   client_secret=CONSUMER_SECRET,
-    )
-    r = requests.post(url=REQUEST_TOKEN_URL, auth=oauth)
-    credentials = parse_qs(r.content)
-    TOKENS['request_token'] = credentials.get('oauth_token')[0]
-    TOKENS['request_token_secret'] = credentials.get('oauth_token_secret')[0]
-
-def get_access_token(TOKENS):
-    oauth = OAuth1(CONSUMER_KEY,
-                   client_secret=CONSUMER_SECRET,
-                   resource_owner_key=TOKENS['request_token'],
-                   resource_owner_secret=TOKENS['request_token_secret'],
-                   verifier=TOKENS['verifier'])
-    r = requests.post(url=ACCESS_TOKEN_URL, auth=oauth)
-    credentials = parse_qs(r.content)
-    TOKENS['access_token'] = credentials.get('oauth_token')[0]
-    TOKENS['access_token_secret'] = credentials.get('oauth_token_secret')[0]
- """   
+  
 @get('/')
 def index():
-  #  get_request_token()
-   # authorize_url = AUTHENTICATE_URL + TOKENS['request_token']
-    return template('login.tpl')#, authorize_url=authorize_url)
+	authorize_url = "https://www.infojobs.net/api/oauth/user-authorize/index.xhtml?scope=Proyecto&client_id=d7b9252346754165aac4a7e0eb6e3f15&redirect_uri=buscatrabajo-manuelluna.rhcloud.com/index.tpl&response_type=1"
+    return template('login.tpl', authorize_url=authorize_url)
    
-"""
-@route('/')
-def index():
+
+@route('/index.tpl')
+def inicio():
     return template('index.tpl')
 
-"""
+
 
 @route('/busqueda')
 def busqueda():
