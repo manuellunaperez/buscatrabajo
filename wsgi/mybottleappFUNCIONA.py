@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 import os
 from bottle import route, run, template, get, post, request, response, redirect, default_app, static_file, TEMPLATE_PATH, error
+
+
 @route('/name/<name>')
 def nameindex(name='Stranger'):
     return '<strong>Hello, %s!</strong>' % name
- 
+   
 @route('/')
 def index():
     return template('index.tpl')
