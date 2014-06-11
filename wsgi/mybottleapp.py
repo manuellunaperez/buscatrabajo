@@ -15,18 +15,18 @@ def inicio():
 
 
 @post('/busqueda')
-client_id = "d02252860f40443b8afb68ad26137f3c"
-client_secret = "FTmld3Q4q167v3e8ZY2yZar/GRl8Jgm1QKi4IS7vNfTQk7E6YP"
-auth = base64.encodestring("%s:%s" % (client_id, client_secret))
-headers = {"Authorization" : "Basic %s" % auth}
-
-conn = httplib.HTTPConnection("api.infojobs.net")
-conn.request("GET", "/api/1/offer", headers=headers)
-response = conn.getresponse()
-data = response.read()
-conn.close()
-
 def busqueda():
+	client_id = "d02252860f40443b8afb68ad26137f3c"
+	client_secret = "FTmld3Q4q167v3e8ZY2yZar/GRl8Jgm1QKi4IS7vNfTQk7E6YP"
+	auth = base64.encodestring("%s:%s" % (client_id, client_secret))
+	headers = {"Authorization" : "Basic %s" % auth}
+
+	conn = httplib.HTTPConnection("api.infojobs.net")
+	conn.request("GET", "/api/1/offer", headers=headers)
+	response = conn.getresponse()
+	data = response.read()
+	conn.close()
+
 	provincia = bottle.request.forms.get("provincia")
 	if len(provincia) > 1:
 		provincia = "province=%s" % provincia
