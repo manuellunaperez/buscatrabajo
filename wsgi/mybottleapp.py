@@ -2,14 +2,59 @@
 import os
 from bottle import route, run, template, get, post, request, response, redirect, default_app, static_file, TEMPLATE_PATH, error
 
+fclaves = open(os.path.join(os.path.dirname(__file__),'claves.txt'),'r')
+claves = fclaves.readline()
+clave = claves.split(",")
+CONSUMER_KEY = clave[0]
+CONSUMER_SECRET = clave[1]
+TOKENS = {}
+oauth = ''
 
-@route('/name/<name>')
-def nameindex(name='Stranger'):
-    return '<strong>Hello, %s!</strong>' % name
+"""REQUEST_TOKEN_URL = 'https://www.infojobs.net/api/oauth/user-authorize/index.xhtml'
+AUTHENTICATE_URL = ''
+ACCESS_TOKEN_URL = 'https://www.infojobs.net/oauth/authorize' 
+ 
+https://www.infojobs.net/api/oauth/user-authorize/index.xhtml
+	?scope=COMMA_SEPARATED_LIST_OF_SCOPE_NAMES
+	&client_id=YOUR_CLIENT_ID
+	&redirect_uri=YOUR_CALLBACK_URI
+	&response_type=code
+	&state=OPTIONAL_CLIENT_LOCAL_STATE
+
+
+ 
+def get_request_token():
+    oauth = OAuth1(CONSUMER_KEY,
+                   client_secret=CONSUMER_SECRET,
+    )
+    r = requests.post(url=REQUEST_TOKEN_URL, auth=oauth)
+    credentials = parse_qs(r.content)
+    TOKENS['request_token'] = credentials.get('oauth_token')[0]
+    TOKENS['request_token_secret'] = credentials.get('oauth_token_secret')[0]
+
+def get_access_token(TOKENS):
+    oauth = OAuth1(CONSUMER_KEY,
+                   client_secret=CONSUMER_SECRET,
+                   resource_owner_key=TOKENS['request_token'],
+                   resource_owner_secret=TOKENS['request_token_secret'],
+                   verifier=TOKENS['verifier'])
+    r = requests.post(url=ACCESS_TOKEN_URL, auth=oauth)
+    credentials = parse_qs(r.content)
+    TOKENS['access_token'] = credentials.get('oauth_token')[0]
+    TOKENS['access_token_secret'] = credentials.get('oauth_token_secret')[0]
+ """   
+@get('/')
+def index():
+  #  get_request_token()
+   # authorize_url = AUTHENTICATE_URL + TOKENS['request_token']
+    return template('login.tpl')#, authorize_url=authorize_url)
    
+"""
 @route('/')
 def index():
     return template('index.tpl')
+
+"""
 
 @route('/busqueda')
 def busqueda():
