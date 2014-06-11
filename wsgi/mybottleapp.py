@@ -4,33 +4,19 @@ from bottle import route, run, template, get, post, request, response, redirect,
 import bottle
 import requests
 import json
-#import urllib2, base64
-
 import httplib, base64
-username = "d02252860f40443b8afb68ad26137f3c"
-password = "FTmld3Q4q167v3e8ZY2yZar/GRl8Jgm1QKi4IS7vNfTQk7E6YP"
-auth = base64.encodestring("%s:%s" % (username, password))
+
+client_id = "d02252860f40443b8afb68ad26137f3c"
+client_secret = "FTmld3Q4q167v3e8ZY2yZar/GRl8Jgm1QKi4IS7vNfTQk7E6YP"
+auth = base64.encodestring("%s:%s" % (client_id, client_secret))
 headers = {"Authorization" : "Basic %s" % auth}
 
-conn = httplib.HTTPConnection("api.infojobs.net")
+conn = httplib.HTTPConnection("api.infojobs.net/api/1/offer")
 conn.request("GET", "/api/1/offer", headers=headers)
 response = conn.getresponse()
 data = response.read()
 conn.close()
 
-"""
-request = urllib2.Request("http://api.infojobs.net/api/1/offer")
-base64string = 'ZDAyMjUyODYwZjQwNDQzYjhhZmI2OGFkMjYxMzdmM2M6RlRtbGQzUTRxMTY3djNlOFpZMnlaYXIvR1JsOEpnbTFRS2k0SVM3dk5mVFFrN0U2WVA='
-request.add_header("Authorization", "Basic %s" % base64string)   
-result = urllib2.urlopen(request)
-
-
-authString = 'ZDAyMjUyODYwZjQwNDQzYjhhZmI2OGFkMjYxMzdmM2M6RlRtbGQzUTRxMTY3djNlOFpZMnlaYXIvR1JsOEpnbTFRS2k0SVM3dk5mVFFrN0U2WVA='
-headers = {'Authorization':"Basic %s" % authString}
-myServer = 'http://api.infojobs.net/api/1/offer'
-req = urllib2.Request(myServer, None, headers)
-openedUrl = urllib2.urlopen(req)
-"""
     
 @get('/')
 def inicio():
