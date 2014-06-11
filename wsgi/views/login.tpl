@@ -7,7 +7,7 @@
   </head>
   <body>
   	<div id="boton" class="centrado"> 
-  		<a "https://www.infojobs.net/api/oauth/user-authorize/index.xhtml?scope=Proyecto&client_id=d7b9252346754165aac4a7e0eb6e3f15&redirect_uri=buscatrabajo-manuelluna.rhcloud.com/index.tpl&response_type=1" class="boton colorBoton formaBoton">Iniciar sesión</a>
+  		<a href="https://www.infojobs.net/api/oauth/user-authorize/index.xhtml?scope=Proyecto&client_id=d7b9252346754165aac4a7e0eb6e3f15&redirect_uri=buscatrabajo-manuelluna.rhcloud.com/index.tpl&response_type=1" class="boton colorBoton formaBoton">Iniciar sesión</a>
   	</div>
   </body>
 </html>
