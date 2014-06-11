@@ -8,7 +8,7 @@ import json
 import urllib2, base64
 
 request = urllib2.Request("http://api.infojobs.net")
-base64string = base64.encodestring('d02252860f40443b8afb68ad26137f3c:FTmld3Q4q167v3e8ZY2yZar/GRl8Jgm1QKi4IS7vNfTQk7E6YP')
+base64string = 'ZDAyMjUyODYwZjQwNDQzYjhhZmI2OGFkMjYxMzdmM2M6RlRtbGQzUTRxMTY3djNlOFpZMnlaYXIvR1JsOEpnbTFRS2k0SVM3dk5mVFFrN0U2WVA='
 request.add_header("Authorization", "Basic %s" % base64string)   
 result = urllib2.urlopen(request)
 
