@@ -2,7 +2,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Twitpy - Iniciar sesión en INFOJOBS</title>
+    <title> Iniciar sesión en INFOJOBS</title>
     <link href="/static/index.css" rel="stylesheet">
   </head>
   <body>
