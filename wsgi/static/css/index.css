@@ -53,8 +53,8 @@ header h1
 }
 #textos
 {
-	width:790px;
-	height:520px;
+	width:auto;
+	height:auto;
 	background-color:#1d1d1d;
 	color:#FFF;
 	border-radius:20px;
