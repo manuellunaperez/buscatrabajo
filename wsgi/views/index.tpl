@@ -2,7 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
   	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Busca trabajo utlizando la API de Infojobs.">
+	<meta name="keywords" content="buscatrabajo, infojobs, trabajo">
+	<meta name="author" content="Manuel Luna Pérez">
     <title> BuscaTrabajo-Inicio</title>
 	<link rel="Shortcut Icon" type="image/x-icon" href="/static/css/imagenes/periodico.jpg" /> 
 	<link href="/static/css/index.css" rel="stylesheet" type="text/css">
