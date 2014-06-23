@@ -251,6 +251,7 @@
 				</select>
 				<br>
 				</br>
+				<input  type="submit" value="Buscar" id="botonSubmit"/></br>
 				                    <!-- inicio codigo contador --><div><a href="http://contador-de-visitas.com"><img style="border: 0px solid ; display: inline;" alt="contador de visitas"
         src="http://contador-de-visitas.com/hit.php?id=2040473&counter=19"></a><br /><a href="http://contador-de-visitas.com"></a></div><!-- fin codigo contador -->
                 
