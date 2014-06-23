@@ -24,6 +24,10 @@ def inicio():
 def inicio():
     return template('informacion.tpl')
 
+@post('/contacto.php')
+def inicio():
+    return template('contacto.php')
+
 
 @post('/busqueda')
 def busqueda():
