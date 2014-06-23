@@ -28,7 +28,7 @@
 	<section>
   		<div id="formulario">
 			<div class="titulo">Contáctanos</div>
-			<form action="contacto.php" method="post">
+			<form action="" method="post">
 				<label for="nombre">¿Cuál es tu nombre?</label>
 				<input type="text" id="nombre" class="estiloinput" placeholder='Escribe tu nombre y apellidos' required size="30">
 				<label for="email">Escribe tu correo:</label></label>

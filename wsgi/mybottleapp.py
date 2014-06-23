@@ -4,8 +4,7 @@ from bottle import route, run, template, get, post, request, response, redirect,
 import bottle
 import requests
 import json
-import smtplib
-
+import httplib
     
 @get('/')
 def inicio():
@@ -23,11 +22,6 @@ def contacto():
 def informacion():
     return template('informacion.tpl')
  
-@get('/contacto.php')
-def informacion():
-    return template('contacto.php')
- 
-
 @post('/busqueda')
 def busqueda():
 	provincia = bottle.request.forms.get("provincia")
