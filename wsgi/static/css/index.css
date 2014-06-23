@@ -54,6 +54,8 @@ header h1
 #textos
 {
 	width:auto;
+	height:520px;
+	max-width:790px;
 	height:auto;
 	background-color:#1d1d1d;
 	color:#FFF;
