@@ -56,7 +56,8 @@ header h1
 #textos
 {
 	width:auto;
-	height:520px;
+	height:auto;
+	min-height:520px;
 	max-width:790px;
 	background-color:#1d1d1d;
 	color:#FFF;
@@ -72,6 +73,7 @@ header h1
 {
 	width:auto;
 	height:auto;
+	min-height:520px;
 	max-width:790px;
 	background-color:#1d1d1d;
 	color:#FFF;
@@ -87,7 +89,8 @@ header h1
 {
 
 	width:auto;
-	height:520px;
+	height:auto;
+	min-height:520px;
 	max-width:790px;
 	background-color:#1d1d1d;
 	color:#FFF;
