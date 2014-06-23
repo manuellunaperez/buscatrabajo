@@ -268,3 +268,8 @@ body section h3
 	color:#e44e2d;
 	
 }
+input
+{
+	font-size: 15px;
+	border-radius:15;
+}
