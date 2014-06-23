@@ -23,6 +23,10 @@ def inicio():
 @get('/informacion.tpl')
 def inicio():
     return template('informacion.tpl')
+ 
+@get('/datos.tpl')
+def inicio():
+    return template('datos.tpl')
 
 @post('/contacto.php')
 def inicio():
