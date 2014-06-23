@@ -255,7 +255,7 @@
 				<input  type="submit" value="Buscar" id="botonSubmit"/></br>
 	</form>
 	</div>
-	<div class="bottom"> </div>
+	<div class="bottom">eo </div>
   </body>
 </html>
 
