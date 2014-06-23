@@ -4,32 +4,29 @@ from bottle import route, run, template, get, post, request, response, redirect,
 import bottle
 import requests
 import json
-import httplib, urllib
+import smtplib
 
     
 @get('/')
 def inicio():
-    return template('index.tpl')
-
+	return template('index.tpl')
+	
 @get('/index.tpl')
 def inicio():
-    return template('index.tpl')
-
+	return template('index.tpl')
 
 @get('/contacto.tpl')
-def inicio():
+def contacto():
     return template('contacto.tpl')
 
 @get('/informacion.tpl')
-def inicio():
+def informacion():
     return template('informacion.tpl')
  
- 
-
-@post('/contacto.php')
-def inicio():
+@get('/contacto.php')
+def informacion():
     return template('contacto.php')
-
+ 
 
 @post('/busqueda')
 def busqueda():
