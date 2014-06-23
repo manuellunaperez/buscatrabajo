@@ -2,7 +2,7 @@
 /*CSS*/
 body
 {
-	background-image:url(static/css/imagenes/6.jpg);
+	background-image:url(/css/imagenes/6.jpg);
 	background-repeat:repeat;
 	background-position:top center;
 	background-size: 100% 100%;
