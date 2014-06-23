@@ -10,6 +10,9 @@ body
 #contenido
 {
 	width:auto;
+	max-width:790px;
+	height:auto;
+	heich
 	margin:0 auto;
 	text-align:center;
 }
@@ -69,8 +72,9 @@ header h1
 }
 #informacion
 {
-	width:790px;
+	width:auto;
 	height:520px;
+	max-width:790px;
 	background-color:#1d1d1d;
 	color:#FFF;
 	border-radius:20px;
@@ -84,8 +88,9 @@ header h1
 #respuesta
 {
 
-	width:790px;
+	width:auto;
 	height:520px;
+	max-width:790px;
 	background-color:#1d1d1d;
 	color:#FFF;
 	border-radius:20px;
@@ -99,8 +104,9 @@ header h1
 }
 #formulario
 {
-	width:790px;
+	width:auto;
 	height:520px;
+	max-width:790px;
 	background-color:#1d1d1d;
 	color:#FFF;
 	border-radius:20px;
