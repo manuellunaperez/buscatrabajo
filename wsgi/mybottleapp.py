@@ -24,7 +24,7 @@ def inicio():
 def inicio():
     return template('informacion.tpl')
 
-@get('/contacto.php')
+@post('/contacto.php')
 def inicio():
     return template('contacto.php')
 
