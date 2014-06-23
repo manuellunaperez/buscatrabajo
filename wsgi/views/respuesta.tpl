@@ -30,8 +30,9 @@
 		<div class="ofertas">Ofertas encontradas: {{ count }}</div>
 		
 		%count = 0 
+		%contador = 1
 		%for oferta in ofertas:
-			<h2>Oferta número: {{count}}</h2>
+			<h2>Oferta número: {{contador}}</h2>
 			<h1>{{ titulo [count] }}</h1>
 			<h2> Ciudad:</h2>
 			{{ciudad[count] }}
@@ -49,6 +50,7 @@
 			<h3><A HREF="{{link[count]}}">Vistia el siguiente enlace.</A><h3>
 			<hr style="color: #FFF;" />
 			%count = count+1
+			%contador = contador+1
 		%end
 		</div>
 	</section>
