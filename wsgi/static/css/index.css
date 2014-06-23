@@ -77,6 +77,7 @@ header h1
 	font-family: 'Francois One', sans-serif;
 	font-size:18px;
 	margin:0 auto;
+	overflow:scroll;
 	
 }
 #informacion
@@ -104,7 +105,7 @@ header h1
 	padding:30px;
 	box-shadow:0px 0px 20px rgba(0,0,0,0.5);
 	margin:0 auto;
-	overflow:scroll;
+
 }
 a
 {
