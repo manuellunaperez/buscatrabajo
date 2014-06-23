@@ -10,8 +10,8 @@ body
 #contenido
 {
 	width:auto;
-	max-width:900px;
-	height:auto;
+	max-width:900px;  
+	height:520px;
 	margin:0 auto;
 	text-align:center;
 }
@@ -89,8 +89,7 @@ header h1
 {
 
 	width:auto;
-	min-height:520px;
-	max-width:790px;
+	height:520px;
 	background-color:#1d1d1d;
 	color:#FFF;
 	border-radius:20px;
