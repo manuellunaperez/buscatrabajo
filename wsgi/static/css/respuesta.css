@@ -1,0 +1,89 @@
+@charset "utf-8";
+/*CSS*/
+body
+{
+	background-position:top center;
+	background-size: 100% 100%;
+
+}
+#contenido
+{
+	width:960px;
+	margin:0 auto;
+	text-align:center;
+}
+#textos
+{
+	font-family: 'Francois One', sans-serif;
+	font-size:18px;
+	margin:0 auto;
+	color:#FFF;
+}
+#respuesta
+{
+	width:750px;
+	height:410px;
+	background-color:#1d1d1d;
+	color:#FFF;
+	border-radius:20px;
+	padding:30px;
+	box-shadow:0px 0px 20px rgba(0,0,0,0.5);
+	font-family: 'Francois One', sans-serif;
+	font-size:18px;
+	margin:0 auto;
+	text-align:justify;
+	
+}
+a
+{
+	color:#e44e2d;
+	font-size:20px;	
+	text-decoration:none;
+}
+.ofertas
+{
+	color:#e44e2d;
+	font-size:24px;	
+	text-align:center;
+}
+body h1
+{
+	text-shadow:0px 0px 30px rgba(0,0,0,0.5);
+	border-bottom:solid;
+	padding-bottom:10px;
+	border-width:1px;
+	border-color:#1d1d1d;
+	font-size:20px;
+	font-family: 'Francois One', sans-serif;
+	margin:0 auto;
+	color:#e44e2d;
+	text-decoration:underline;
+	text-align:center;
+	
+}
+body h2
+{
+	text-shadow:0px 0px 30px rgba(0,0,0,0.5);
+	border-bottom:solid;
+	padding-bottom:10px;
+	border-width:1px;
+	border-color:#1d1d1d;
+	font-size:18px;
+	font-family: 'Francois One', sans-serif;
+	margin:0 auto;
+	color:#e44e2d;
+	
+}
+body h3
+{
+	text-shadow:0px 0px 30px rgba(0,0,0,0.5);
+	border-bottom:solid;
+	padding-bottom:10px;
+	border-width:1px;
+	border-color:#1d1d1d;
+	font-size:15px;
+	font-family: 'Francois One', sans-serif;
+	margin:0 auto;
+	color:#e44e2d;
+	
+}
