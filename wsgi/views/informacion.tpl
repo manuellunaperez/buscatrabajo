@@ -6,7 +6,7 @@
     <title>BuscaTrabajo-Informacion</title>
 	<link rel="Shortcut Icon" type="image/x-icon" href="/static/css/imagenes/periodico.jpg" /> 
 	<link href="/static/css/index.css" rel="stylesheet" type="text/css">
-	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' >
+	<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' >
   </head>
   <body>
   	<div id='contenido'>
