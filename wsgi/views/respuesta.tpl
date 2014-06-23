@@ -23,7 +23,11 @@
 	</header>
 	<section>
 		<div id="respuesta">
-		<div class="ofertas">Ofertas encontradas:</div>
+			%count = 0 
+			%for oferta in ofertas:	
+					%count = count+1
+			%end
+		<div class="ofertas">Ofertas encontradas: count</div>
 		
 		%count = 0 
 		%for oferta in ofertas:
@@ -41,8 +45,8 @@
 			<h2>Requisitos minimos: </h2>
 			{{requisitosmin[count]}}
 			<h2>¿Estás interesado en esta oferta?<h2>
-			<h3><A HREF="Vistia el siguiente enlace.">{{link[count]}}</A><h3>
-		%count = count+1
+			<h3><A HREF="{{link[count]}}">Vistia el siguiente enlace.</A><h3>
+			%count = count+1
 		%end
 		</div>
 	</section>
