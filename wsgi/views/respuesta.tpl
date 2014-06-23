@@ -27,7 +27,7 @@
 			%for oferta in ofertas:	
 					%count = count+1
 			%end
-		<div class="ofertas">Ofertas encontradas: count</div>
+		<div class="ofertas">Ofertas encontradas: {{ count }}</div>
 		
 		%count = 0 
 		%for oferta in ofertas:
