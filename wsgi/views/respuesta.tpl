@@ -43,7 +43,7 @@
 			<h2>Tipo de jornada:</h2>
 			{{jornada[count]}}
 			<h2>Estudios requeridos:</h2>
-			{{estudios[count]}
+			{{estudios[count]}}
 			<h2>Requisitos minimos: </h2>
 			{{requisitosmin[count]}}
 			<h2>¿Estás interesado en esta oferta?<h2>
