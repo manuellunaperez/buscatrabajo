@@ -11,6 +11,18 @@ import httplib, urllib
 def inicio():
     return template('index.tpl')
 
+@get('/index.tpl')
+def inicio():
+    return template('index.tpl')
+
+
+@get('/contacto.tpl')
+def inicio():
+    return template('contacto.tpl')
+
+@get('/informacion.tpl')
+def inicio():
+    return template('informacion.tpl')
 
 
 @post('/busqueda')
