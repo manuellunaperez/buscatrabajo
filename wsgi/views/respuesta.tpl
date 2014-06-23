@@ -22,8 +22,31 @@
 		</nav>
 	</header>
 	<section>
-		<iframe src="datos.tpl" id="respuesta" marginwidth="0" marginheight="0" frameborder="0" border="0">
-		</iframe>
+		<div id="respuesta">
+		<div class="ofertas">Ofertas encontradas:</div>
+		
+		%count = 0 
+		%for oferta in ofertas:
+		<div id="textos">
+			<h1>{{ titulo [count] }}</h1>
+			<h2> Ciudad:</h2>
+			{{ciudad[count] }}
+			<h2>Nombre de la empresa:</h2>
+			{{ nombreempresa [count] }}
+			<h2>Experiencia mínima requerida:</h2>
+			{{experienciaminima[count]}}
+			<h2>Tipo de jornada:</h2>
+			{{jornada[count]}}
+			<h2>Estudios requeridos:</h2>
+			{{estudios[count]}
+			<h2>Requisitos minimos: </h2>
+			{{requisitosmin[count]}}
+			<h2>¿Estás interesado en esta oferta?<h2>
+			<h3><A HREF="{{link[count]}}">{{link[count]}}</A><h3>
+		%count = count+1
+		%end
+		</div>
+		</div>
 	</section>
 		<p></p>
 
