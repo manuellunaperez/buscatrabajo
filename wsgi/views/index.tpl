@@ -1,16 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>BuscaTrabajo</title>
+  	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title> BuscaTrabajo-Inicio</title>
+	<link rel="Shortcut Icon" type="image/x-icon" href="/static/imagenes/periodico.jpg" /> 
+	<link href="/static/css/index.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' >
+	<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' >
   </head>
   <body>
-    <h3><span style="color: black;">Bienvenido, aqui podrás buscar trabajo por provincias</span></h3>
+  	<div id='contenido'>
+  	<header>
+		<h1>BUSCATRABAJO</h1> 
+		<nav>
+			<ul>
+				<li><a href='index.tpl'>Inicio</a></li>
+				<li><a href='informacion.tpl'>Información</a></li>
+				<li><a href='contacto.tpl'>Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<div id="textos">
     <form method="post" action="/busqueda">
-		<table>
-			<tr>
-				<td>Selecciona la provincia</td>
-				<td>			
+				<div class="titulo">¿De dónde eres?</div>
+				Selecciona la província en la vives para encontrar trabajo.</br>
 				<select name="provincia">
 					<option value="a-coruna">A Coruña</option>
 					<option value="alava-araba">Álava</option>
@@ -64,12 +79,8 @@
 					<option value="vizcaya-bizkaia">Vizcaya</option>
 					<option value="zamora">Zamora</option>
 					<option value="zaragoza">Zaragoza</option>
-				</select>
-				</td>
-			</tr>	
-			<tr>
-				<td>Selecciona la categoría</td>
-				<td>			
+				</select></br>
+				<br><div class="titulo">¿A qué te dedicas?</div>Selecciona la categoría que más se adecúe a tus prestaciones.</br>		
 				<select name="categoria">
 					<option value="">Todas</option>
 					<option value="administraciones-europeas">Administraciones europeas</option>
@@ -200,12 +211,8 @@
 					<option value="turismo">Turismo</option>
 					<option value="tecnicas-audiovisuales">Técnicas audiovisuales</option>
 					<option value="venta-detalle">Venta al detalle</option>
-				</select>
-				</td>
-			</tr>
-			<tr>
-				<td>Selecciona el tipo de contrato</td>
-				<td>			
+				</select></br>
+				<br><div class="titulo">¿Durante cuánto tiempo necesitas empleo?</div>Selecciona el tipo de contrato que más te convenga.</br>		
 				<select name="contratos">
 					<option value="">Todos</option>
 					<option value="a-tiempo-parcial">A tiempo parcial</option>
@@ -216,12 +223,8 @@
 					<option value="formativo">Formativo</option>
 					<option value="indefinido">Indefinido</option>
 					<option value="otros-contratos">Otros contratos</option>
-				</select>
-				</td>
-			</tr>
-			<tr>
-				<td>Formación y estudios</td>
-				<td>			
+				</select></br>
+				<br><div class="titulo">¿Cuál es tu formación?</div>Indica cuáles son tus estudios.</br>		
 				<select name="formacion">
 					<option value=""></option>
 					<option value="otros-titulos-certificaciones-y-carnes">Otros títulos, certificaciones y carnés</option>
@@ -243,15 +246,11 @@
 					<option value="master">Master</option>
 					<option value="doctorado">Doctorado</option>
 				</select>
-				</td>
-			</tr>
-			<tr>
-			<td colspan="2"> 
-				<input  type="submit" value="Buscar"/>
-			</td>
-			</tr>
-		</table>
+				<br>
+				</br>
+				<input  type="submit" value="Buscar" id="botonSubmit"/></br>
 	</form>
+	</div>
   </body>
 </html>
 

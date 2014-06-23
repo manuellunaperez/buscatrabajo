@@ -5,23 +5,6 @@ import bottle
 import requests
 import json
 import httplib, urllib
-"""
-import httplib, base64
-contractType=indefinido&province=madrid&category=informatica-telecomunicaciones 
-params= urllib.urlencode({'province':' madrid' ,'contractType':' indefinido' ,'category':' informatica-telecomunicaciones ' })
-
-params = urllib.urlencode({'@contractType': 'indefinido', '@province': 'madrid', '@category': 'informatica-telecomunicaciones'})
-#client_id = "d02252860f40443b8afb68ad26137f3c"
-#client_secret = ":FTmld3Q4q167v3e8ZY2yZar/GRl8Jgm1QKi4IS7vNfTQk7E6YP"
-client = "ZDAyMjUyODYwZjQwNDQzYjhhZmI2OGFkMjYxMzdmM2M6RlRtbGQzUTRxMTY3djNlOFpZMnlaYXIvR1JsOEpnbTFRS2k0SVM3dk5mVFFrN0U2WVA="
-#auth = base64.encodestring("%s:%s" % (client_id,client_secret))
-headers = {"Authorization" : "Basic %s" % client}
-conn = httplib.HTTPConnection("api.infojobs.net")
-conn.request("GET", "/api/1/offer?contractType=indefinido&province=madrid&category=informatica-telecomunicaciones", headers=headers)
-response = conn.getresponse()
-data = response.read()
-conn.close()
-"""
 
     
 @get('/')
@@ -53,7 +36,8 @@ def busqueda():
 	else:
 		formacion = ""
 
-	client = "ZDAyMjUyODYwZjQwNDQzYjhhZmI2OGFkMjYxMzdmM2M6RlRtbGQzUTRxMTY3djNlOFpZMnlaYXIvR1JsOEpnbTFRS2k0SVM3dk5mVFFrN0U2WVA="
+	clave = open('clave.txt','r')
+	client = (clave.read())
 	headers = {"Authorization" : "Basic %s" % client}
 	conn = httplib.HTTPConnection("api.infojobs.net")
 	conn.request("GET", "/api/1/offer?%s%s%s%s" % (provincia,categoria,contratos,formacion), headers=headers)
@@ -93,7 +77,6 @@ def busqueda():
 	return template('respuesta.tpl', {'ofertas':ofertas,'titulo':listatitulos,'ciudad':listaciudad,'nombreempresa':listanombreempresa,'experienciaminima':listaexperiencia,'jornada':listajornada,'estudios':listaestudios,'requisitosmin':listarequisitosmin,'link':listalink})
 	
 
-# This must be added in order to do correct path lookups for the views
 import os
 from bottle import TEMPLATE_PATH
 ON_OPENSHIFT = False
