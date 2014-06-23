@@ -26,7 +26,7 @@
     <form method="post" action="/busqueda">
 				<div class="titulo">¿De dónde eres?</div>
 				Selecciona la província en la vives para encontrar trabajo.</br>
-				<select name="provincia">
+				<select name="provincia" class="estiloinput">
 					<option value="a-coruna">A Coruña</option>
 					<option value="alava-araba">Álava</option>
 					<option value="albacete">Albacete</option>
