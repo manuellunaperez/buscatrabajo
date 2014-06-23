@@ -52,7 +52,7 @@ def busqueda():
 	else:
 		formacion = ""
 
-	clave = open('clave.txt','r')
+	clave = open('~/app-root/repo/wsgi/clave.txt','r')
 	client = (clave.read())
 	headers = {"Authorization" : "Basic %s" % client}
 	conn = httplib.HTTPConnection("api.infojobs.net")
