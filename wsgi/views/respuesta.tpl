@@ -10,6 +10,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' >
   </head>
   <body>
+  	<div id='contenido'>
   	<header>
 		<h1>BUSCATRABAJO</h1> 
 		<nav>
@@ -25,7 +26,6 @@
 		
 		%count = 0 
 		%for oferta in ofertas:
-		<div id="textos">
 			<h1>{{ titulo [count] }}</h1>
 			<h2> Ciudad:</h2>
 			{{ciudad[count] }}
@@ -43,8 +43,10 @@
 			<h3><A HREF="{{link[count]}}">{{link[count]}}</A><h3>
 		%count = count+1
 		%end
-		</div>
+	</div>
 	</section>
+		<p></p>
+
 		<form action="index.tpl"> 
 			<input type=submit id="botonvolverabuscar" value="Buscar otras ofertas">
 		</form>
