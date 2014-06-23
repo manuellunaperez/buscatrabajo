@@ -24,10 +24,6 @@ def inicio():
 def inicio():
     return template('informacion.tpl')
  
-@get('/datos.tpl')
-def inicio():
-    return template('datos.tpl')
-
 @post('/contacto.php')
 def inicio():
     return template('contacto.php')
@@ -91,7 +87,10 @@ def busqueda():
 		listarequisitosmin.append(requisitosmin)
 		listalink.append(link)
 	
-	return template('respuesta.tpl'),template('datos.tpl', {'ofertas':ofertas,'titulo':listatitulos,'ciudad':listaciudad,'nombreempresa':listanombreempresa,'experienciaminima':listaexperiencia,'jornada':listajornada,'estudios':listaestudios,'requisitosmin':listarequisitosmin,'link':listalink})
+	return template('respuesta.tpl')
+@get('/datos.tpl')
+def inicio():
+    return template('datos.tpl', {'ofertas':ofertas,'titulo':listatitulos,'ciudad':listaciudad,'nombreempresa':listanombreempresa,'experienciaminima':listaexperiencia,'jornada':listajornada,'estudios':listaestudios,'requisitosmin':listarequisitosmin,'link':listalink})
 	
 
 import os
