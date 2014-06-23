@@ -9,11 +9,8 @@
 	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' >
 	<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' >
   </head>
-<body>	%encontradas = 0
-		%for oferta in ofertas:
-				%encontradas = encontradas+1
-		%end	
-		<div class="ofertas">Ofertas encontradas: encontradas</div>
+<body>	
+		<div class="ofertas">Ofertas encontradas:</div>
 		
 		%count = 0 
 		%for oferta in ofertas:
