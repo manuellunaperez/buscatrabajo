@@ -41,7 +41,7 @@
 			<h2>Requisitos minimos: </h2>
 			{{requisitosmin[count]}}
 			<h2>¿Estás interesado en esta oferta?<h2>
-			<h3><A HREF="{{link[count]}}">{{link[count]}}</A><h3>
+			<h3><A HREF="Vistia el siguiente enlace.">{{link[count]}}</A><h3>
 		%count = count+1
 		%end
 		</div>

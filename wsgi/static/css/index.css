@@ -117,6 +117,12 @@ a
 	font-size:20px;	
 	text-decoration:none;
 }
+body section h3 a
+{
+	color:#FFF;
+	font-size:15px;	
+	text-decoration:none;
+}
 .titulo
 {
 	color:#e44e2d;
