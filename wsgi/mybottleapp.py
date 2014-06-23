@@ -52,9 +52,8 @@ def busqueda():
 	else:
 		formacion = ""
 
-	clave = open('~/app-root/repo/wsgi/clave.txt','r')
-	client = (clave.read())
-	headers = {"Authorization" : "Basic %s" % client}
+	clave = 'ZDAyMjUyODYwZjQwNDQzYjhhZmI2OGFkMjYxMzdmM2M6RlRtbGQzUTRxMTY3djNlOFpZMnlaYXIvR1JsOEpnbTFRS2k0SVM3dk5mVFFrN0U2WVA='
+	headers = {"Authorization" : "Basic %s" % clave}
 	conn = httplib.HTTPConnection("api.infojobs.net")
 	conn.request("GET", "/api/1/offer?%s%s%s%s" % (provincia,categoria,contratos,formacion), headers=headers)
 	response = conn.getresponse()
