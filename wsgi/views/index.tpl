@@ -81,7 +81,7 @@
 					<option value="zaragoza">Zaragoza</option>
 				</select></br>
 				<br><div class="titulo">¿A qué te dedicas?</div>Selecciona la categoría que más se adecúe a tus prestaciones.</br>		
-				<select name="categoria">
+				<select name="categoria" class="estiloinput">
 					<option value="">Todas</option>
 					<option value="administraciones-europeas">Administraciones europeas</option>
 					<option value="administracion">Administración</option>
@@ -213,7 +213,7 @@
 					<option value="venta-detalle">Venta al detalle</option>
 				</select></br>
 				<br><div class="titulo">¿Durante cuánto tiempo necesitas empleo?</div>Selecciona el tipo de contrato que más te convenga.</br>		
-				<select name="contratos">
+				<select name="contratos" class="estiloinput">
 					<option value="">Todos</option>
 					<option value="a-tiempo-parcial">A tiempo parcial</option>
 					<option value="autonomo">Autónomo</option>
@@ -225,7 +225,7 @@
 					<option value="otros-contratos">Otros contratos</option>
 				</select></br>
 				<br><div class="titulo">¿Cuál es tu formación?</div>Indica cuáles son tus estudios.</br>		
-				<select name="formacion">
+				<select name="formacion" class="estiloinput">
 					<option value=""></option>
 					<option value="otros-titulos-certificaciones-y-carnes">Otros títulos, certificaciones y carnés</option>
 					<option value="otros-cursos-y-formacion-no-reglada">Otros cursos y formación no reglada</option>
