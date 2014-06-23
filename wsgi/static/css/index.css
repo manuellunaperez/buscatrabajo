@@ -268,8 +268,14 @@ body section h3
 	color:#e44e2d;
 	
 }
-input
+.estiloinput
 {
 	font-size: 15px;
 	border-radius:15;
 }
+.estiloarea
+{
+	font-size: 15px;
+	border-radius:20;
+}
+
