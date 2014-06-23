@@ -24,6 +24,7 @@ def inicio():
 def inicio():
     return template('informacion.tpl')
  
+ 
 
 @post('/contacto.php')
 def inicio():
@@ -91,7 +92,10 @@ def busqueda():
 	return template('respuesta.tpl', {'ofertas':ofertas,'titulo':listatitulos,'ciudad':listaciudad,'nombreempresa':listanombreempresa,'experienciaminima':listaexperiencia,'jornada':listajornada,'estudios':listaestudios,'requisitosmin':listarequisitosmin,'link':listalink})
 	
 
-
+@get('/datos.tpl')
+def inicio():
+    return template('datos.tpl')
+ 
 import os
 from bottle import TEMPLATE_PATH
 ON_OPENSHIFT = False
