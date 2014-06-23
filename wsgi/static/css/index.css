@@ -284,6 +284,9 @@ body section h3
 {
 	font-size: 15px;
 	border-radius:10px;
+	width:100%;
+	   margin:5px 0;
+    padding:3px;
 }
 lead {
   margin-bottom: 20px;
