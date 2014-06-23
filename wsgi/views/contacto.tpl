@@ -34,7 +34,7 @@
 				<label for="fecha">¿Qué día es hoy?</label>
 				<input type="date" id="fecha"  class="estiloinput" size="15">
 				<label for="comentario">Escríbenos tu pregunta o comentario:</label>
-				<textarea name="comentario" class="estiloarea" rows="6" cols="60" maxlength="372" required></textarea></br>
+				<textarea name="comentario" class="estiloarea" rows="6" cols="60" maxlength="360" required></textarea></br>
 				<input  type="submit" value="Enviar" id="botonenviar"/>
 				<input type="Reset" value="Borrar datos" id="botonreset">  
 			</form>
