@@ -4,7 +4,7 @@
   	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>BuscaTrabajo-Informacion</title>
-	<link rel="Shortcut Icon" type="image/x-icon" href="/static/imagenes/periodico.jpg" /> 
+	<link rel="Shortcut Icon" type="image/x-icon" href="/static/css/imagenes/periodico.jpg" /> 
 	<link href="/static/css/index.css" rel="stylesheet" type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' >
 	<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' >

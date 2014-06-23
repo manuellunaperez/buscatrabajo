@@ -88,8 +88,6 @@ def busqueda():
 		listarequisitosmin.append(requisitosmin)
 		listalink.append(link)
 	
-	
-	
 	return template('respuesta.tpl', {'ofertas':ofertas,'titulo':listatitulos,'ciudad':listaciudad,'nombreempresa':listanombreempresa,'experienciaminima':listaexperiencia,'jornada':listajornada,'estudios':listaestudios,'requisitosmin':listarequisitosmin,'link':listalink})
 	
 
