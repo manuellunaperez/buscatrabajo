@@ -56,28 +56,28 @@ header h1
 #textos
 {
 	width:790px;
-	height:500px;
+	height:520px;
 	background-color:#1d1d1d;
 	color:#FFF;
 	border-radius:20px;
 	padding:30px;
 	box-shadow:0px 0px 20px rgba(0,0,0,0.5);
 	font-family: 'Francois One', sans-serif;
-	font-size:20px;
+	font-size:24px;
 	margin:0 auto;
 	
 }
 #informacion
 {
 	width:790px;
-	height:500px;
+	height:520px;
 	background-color:#1d1d1d;
 	color:#FFF;
 	border-radius:20px;
 	padding:30px;
 	box-shadow:0px 0px 20px rgba(0,0,0,0.5);
 	font-family: 'Francois One', sans-serif;
-	font-size:20px;
+	font-size:24px;
 	margin:0 auto;
 	text-align:justify;
 }
@@ -85,7 +85,7 @@ header h1
 {
 
 	width:790px;
-	height:500px;
+	height:520px;
 	background-color:#1d1d1d;
 	color:#FFF;
 	border-radius:20px;
@@ -99,7 +99,7 @@ header h1
 }
 #formulario
 {
-	width:790x;
+	width:790px;
 	height:520px;
 	background-color:#1d1d1d;
 	color:#FFF;
@@ -107,7 +107,7 @@ header h1
 	padding:30px;
 	box-shadow:0px 0px 20px rgba(0,0,0,0.5);
 	font-family: 'Francois One', sans-serif;
-	font-size:20px;
+	font-size:24px;
 	margin:0 auto;	
 }
 
