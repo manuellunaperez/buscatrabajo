@@ -252,6 +252,8 @@
 				<br>
 				</br>
 				<input  type="submit" value="Buscar" id="botonSubmit"/></br>
+				<!-- inicio codigo contador --><a href="http://www.trucoshtmlweb.blogspot.com.es/"><img style="border: 0px solid ; display: inline;" alt="contador de visitas"
+            src="http://contador-de-visitas.com/hit.php?id=1430213&counter=30"></a><br /><a href="http://www.trucoshtmlweb.blogspot.com.es/">Contador Visitas</a><!-- fin codigo contador -->
 	</form>
 	</div>
   </body>
