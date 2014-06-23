@@ -25,15 +25,15 @@
   		<div id="formulario">
 			<div class="titulo">Contáctanos</div>
 			<form action="contacto.php" method="post">
-				<label for="nombre">Nombre:</label>
-				<input type="text" id="nombre" placeholder='Escribe tu nombre' required>
-				<label for="email">E-mail:</label>
-				<input type="email" id="email" placeholder='Escribe tu e-mail' required>
-				<label for="edad">Edad:</label>
-				<input type="number" id="edad" min="0" max="100">
-				<label for="fecha">Fecha:</label>
-				<input type="date" id="fecha">
-				<label for="comentario">Comentario:</label>
+				<label for="nombre">¿Cuál es tu nombre?</label>
+				<input type="text" id="nombre" placeholder='Escribe tu nombre' required size="10">
+				<label for="email">Escribe tu correo:</label></label>
+				<input type="email" id="email" placeholder='Escribe tu e-mail' required size="10">
+				<label for="edad">¿Cuántos años tienes?</label>
+				<input type="number" id="edad" min="0" max="100" placeholder='18' size="10">
+				<label for="fecha">¿Qué día es hoy?</label>
+				<input type="date" id="fecha" size="10">
+				<label for="comentario">Escribenos tu pregunta o comentario:</label>
 				<textarea name="comentario" rows="6" cols="60" maxlength="372" required></textarea></br>
 				<input  type="submit" value="Enviar" id="botonenviar"/>
 				<input type="Reset" value="Borrar datos" id="botonreset">  
