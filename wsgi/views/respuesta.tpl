@@ -31,6 +31,7 @@
 		
 		%count = 0 
 		%for oferta in ofertas:
+			<h2>Oferta número: {{count}}</h2>
 			<h1>{{ titulo [count] }}</h1>
 			<h2> Ciudad:</h2>
 			{{ciudad[count] }}
@@ -46,6 +47,7 @@
 			{{requisitosmin[count]}}
 			<h2>¿Estás interesado en esta oferta?<h2>
 			<h3><A HREF="{{link[count]}}">Vistia el siguiente enlace.</A><h3>
+			<hr style="color: #FFF;" />
 			%count = count+1
 		%end
 		</div>
