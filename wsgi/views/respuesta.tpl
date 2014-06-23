@@ -10,7 +10,6 @@
 	<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' >
   </head>
   <body>
-  	<div id='contenido'>
   	<header>
 		<h1>BUSCATRABAJO</h1> 
 		<nav>
@@ -46,8 +45,6 @@
 		%end
 		</div>
 	</section>
-		<p></p>
-
 		<form action="index.tpl"> 
 			<input type=submit id="botonvolverabuscar" value="Buscar otras ofertas">
 		</form>
