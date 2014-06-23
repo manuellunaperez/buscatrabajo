@@ -10,7 +10,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' >
   </head>
   <body>
-  	<div id='contenido'>
+  	<div id='contenido2'>
   	<header>
 		<h1>BUSCATRABAJO</h1> 
 		<nav>
