@@ -22,7 +22,6 @@
 		</nav>
 	</header>
 	<section>
-		<div id="respuesta">
 		<div class="ofertas">Ofertas encontradas:</div>
 		
 		%count = 0 
@@ -45,7 +44,6 @@
 			<h3><A HREF="{{link[count]}}">{{link[count]}}</A><h3>
 		%count = count+1
 		%end
-		</div>
 		</div>
 	</section>
 		<p></p>
