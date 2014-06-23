@@ -10,7 +10,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' >
   </head>
   <body>
-  	<div id='contenido2'>
+  	<div id='contenido'>
   	<header>
 		<h1>BUSCATRABAJO</h1> 
 		<nav>
@@ -22,6 +22,7 @@
 		</nav>
 	</header>
 	<section>
+		<div id="formulario">
 		<div class="ofertas">Ofertas encontradas:</div>
 		
 		%count = 0 
@@ -43,7 +44,8 @@
 			<h3><A HREF="{{link[count]}}">{{link[count]}}</A><h3>
 		%count = count+1
 		%end
-	</div>
+		</div>
+	
 	</section>
 		<p></p>
 
