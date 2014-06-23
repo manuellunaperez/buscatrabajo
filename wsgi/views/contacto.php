@@ -7,7 +7,7 @@ isset($_POST['comentario']) && !empty($_POST['comentario']))
 	$nombre = $_POST['nombre']; 	
 	$correo_electronico= $_POST['email']; 
 	$comentario= $_POST['comentario']; 
-	$para = "manuellunaperez@gmail.com"; 
+	$para = "manue_lp@hotmail.com"; 
 	$asunto = "BUSCATRABAJO-COMENTARIO";
 	$desde = "From:". "Buscatrabajo" ;
 	mail($para, $asunto, $comentario,$desde);
