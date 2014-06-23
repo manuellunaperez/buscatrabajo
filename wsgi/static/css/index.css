@@ -216,3 +216,44 @@ textarea
 	background-color:#e44e2d;
 	border: 2px solid #555555;
 }
+body h1
+{
+	text-shadow:0px 0px 30px rgba(0,0,0,0.5);
+	border-bottom:solid;
+	padding-bottom:10px;
+	border-width:1px;
+	border-color:#1d1d1d;
+	font-size:20px;
+	font-family: 'Francois One', sans-serif;
+	margin:0 auto;
+	color:#e44e2d;
+	text-decoration:underline;
+	text-align:center;
+	
+}
+body h2
+{
+	text-shadow:0px 0px 30px rgba(0,0,0,0.5);
+	border-bottom:solid;
+	padding-bottom:10px;
+	border-width:1px;
+	border-color:#1d1d1d;
+	font-size:18px;
+	font-family: 'Francois One', sans-serif;
+	margin:0 auto;
+	color:#e44e2d;
+	
+}
+body h3
+{
+	text-shadow:0px 0px 30px rgba(0,0,0,0.5);
+	border-bottom:solid;
+	padding-bottom:10px;
+	border-width:1px;
+	border-color:#1d1d1d;
+	font-size:15px;
+	font-family: 'Francois One', sans-serif;
+	margin:0 auto;
+	color:#e44e2d;
+	
+}
