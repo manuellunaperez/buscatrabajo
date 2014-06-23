@@ -22,7 +22,7 @@
 		</nav>
 	</header>
 	<section>
-		<div id="formulario">
+		<div id="respuesta">
 		<div class="ofertas">Ofertas encontradas:</div>
 		
 		%count = 0 
@@ -45,10 +45,7 @@
 		%count = count+1
 		%end
 		</div>
-	
 	</section>
-		<p></p>
-
 		<form action="index.tpl"> 
 			<input type=submit id="botonvolverabuscar" value="Buscar otras ofertas">
 		</form>

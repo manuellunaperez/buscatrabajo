@@ -5,7 +5,7 @@ body
 	background-image:url(imagenes/6.jpg);
 	background-repeat:repeat;
 	background-position:top center;
-	background-size: 100% 100%;
+	background-size:100% 100%;
 
 }
 #contenido
@@ -13,13 +13,6 @@ body
 	width:960px;
 	margin:0 auto;
 	text-align:center;
-}
-#contenido2
-{
-	width:960px;
-	margin:0 auto;
-	text-align:center;
-	overflow:scroll;
 }
 nav ul li
 { 
@@ -115,6 +108,7 @@ header h1
 	font-family: 'Francois One', sans-serif;
 	font-size:18px;
 	margin:0 auto;	
+	overflow:scroll;
 }
 a
 {
