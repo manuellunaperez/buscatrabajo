@@ -287,3 +287,11 @@ lead {
     font-size: 21px;
   }
 }
+.bottom 
+{ 
+	position: absolute; 
+	text-align: center; 
+	width: 100%; 
+	bottom: 0px; 
+	width: 100%; 
+} 
