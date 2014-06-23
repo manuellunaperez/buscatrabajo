@@ -18,8 +18,8 @@ body
 nav ul li
 { 
 	display:inline-block;
-	margin-right:40px;
-	margin-left:40px;
+	margin-right:50px;
+	margin-left:50px;
 	color:#1d1d1d;
 	cursor: pointer;
 	padding::5px;
@@ -55,7 +55,7 @@ header h1
 }
 #formulario
 {
-	width:800x;
+	width:790x;
 	height:520px;
 	background-color:#1d1d1d;
 	color:#FFF;
@@ -69,7 +69,7 @@ header h1
 
 #textos
 {
-	width:800px;
+	width:790px;
 	height:520px;
 	background-color:#1d1d1d;
 	color:#FFF;
@@ -79,12 +79,11 @@ header h1
 	font-family: 'Francois One', sans-serif;
 	font-size:24px;
 	margin:0 auto;
-
 	
 }
 #informacion
 {
-	width:800px;
+	width:790px;
 	height:520px;
 	background-color:#1d1d1d;
 	color:#FFF;
@@ -95,12 +94,11 @@ header h1
 	font-size:24px;
 	margin:0 auto;
 	text-align:justify;
-	
 }
 #respuesta
 {
 
-	width:800px;
+	width:790px;
 	height:520px;
 	background-color:#1d1d1d;
 	color:#FFF;
